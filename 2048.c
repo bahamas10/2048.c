@@ -10,7 +10,7 @@
 #include <stdlib.h> // srand, rand, system
 #include <string.h> // strlen
 #include <time.h> // time
-#include <unistd.h> // usleep
+#include <unistd.h> // usleep, sleep, getopt
 
 // config
 #define BOARD_SIZE 4
@@ -74,12 +74,13 @@ void merge_piece(int x, int y, int direction);
 int out_of_bounds(int x, int y);
 int has_moves_left();
 
+// fix the tty on exit
 void on_exit() {
 	system("stty cooked");
 }
 
+// print the usage to the given stream
 void print_usage(FILE *stream) {
-
 	fprintf(stream, "Usage: 2048 [-a] [-b] [-h] [-g <goal>]\n");
 	fprintf(stream, "\n");
 	fprintf(stream, "Options\n");
