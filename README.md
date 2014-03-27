@@ -1,5 +1,5 @@
-bash 2048
-=========
+2048.c
+======
 
 My take at http://gabrielecirulli.github.io/2048/ in C
 
