@@ -75,7 +75,7 @@ int out_of_bounds(int x, int y);
 int has_moves_left();
 
 // fix the tty on exit
-void on_exit() {
+void on_exit2() { /*Fixed to on_exit2 (on_exit is in stdlib.h*/
 	system("stty cooked");
 }
 
@@ -117,7 +117,7 @@ int main(int argc, char **argv) {
 	}
 
 	// setup exit handler
-	atexit(on_exit);
+	atexit(on_exit2);
 	system("stty raw");
 
 	// initialize random
