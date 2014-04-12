@@ -75,7 +75,7 @@ int out_of_bounds(int x, int y);
 int has_moves_left();
 
 // fix the tty on exit
-void on_exit2() { /*Fixed to on_exit2 (on_exit is in stdlib.h*/
+void on_exit2() { /* Fixed to on_exit2 (on_exit is in non-posix stdlib.h) */
 	system("stty cooked");
 }
 
